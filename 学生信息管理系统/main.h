@@ -1,12 +1,12 @@
-#pragma once
+#pragma once						//头文件说明
 #define _CRT_SECURE_NO_WARNINGS		//解决scanf报错问题
-
 #define M 2							//学生个数
 #define NAME 10						//姓名字段数
 
-#include<stdio.h>					
-#include<stdlib.h>					
+#include<stdio.h>					//
+#include<stdlib.h>					//
 #include<Windows.h>					//引入基本函数
+
 //学生信息架构
 struct studey
 {
@@ -15,18 +15,21 @@ struct studey
 	int six;		//年龄
 	int xh;			//学号
 }STU[M];
-//函数
+
+//各功能函数
 void code22();		//头部选择模块（实验）
 void code21();		//程序模块（输入输出学生信息模块）
 void code23();		//查询学生信息模块（总）
 void code24();		//退出程序模块
 void xmcx();		//姓名查询模块
-void xstj();		//学生信息添加模块
-void xxgx();		//学生信息更新模块
-void scxsxx();		//删除学生信息模块
-void xhcx();		//学号查询模块
-void grxxbgxt();	//信息报告系统
-//
+void xbcx();		//性别查询模块
+void xstj();		//学生信息添加模块（待开发）
+void xxgx();		//学生信息更新模块（待开发）
+void scxsxx();		//删除学生信息模块（待开发）
+void xhcx();		//学号查询模块（待开发）
+void grxxbgxt();	//信息报告系统（待开发）
+
+//code 20-50 为实验代码片段
 
 
 //code22 为头部选择模块（实验）
@@ -77,7 +80,7 @@ void code23() {
 	{
 	case 1:xmcx(); break;
 	case 2:break;
-	case 3:break;
+	case 3:xbcx(); break;
 	case 4:break;
 	case 0:code22(); break;
 	default:break;
@@ -102,11 +105,14 @@ void xmcx() {
 	}
 	code22();
 }
+void xbcx() {
+
+}
 //code24 为退出程序模块
 void code24() {
 	int i;
 	//int a[6][8], b[4][5];//之前的
-
+	
 	printf("\n正在退出");
 	for (i = 0; i < 8; i++) {
 		Sleep(1000);
