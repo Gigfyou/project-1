@@ -106,6 +106,7 @@ void xmcx() {
 	code22();
 }
 void xbcx() {
+	char xb[2];
 
 }
 //code24 为退出程序模块
@@ -116,7 +117,7 @@ void code24() {
 	printf("\n正在退出");
 	for (i = 0; i < 8; i++) {
 		Sleep(1000);
-		printf(".");
+		printf(">");
 	}
 	exit(code22);
 }

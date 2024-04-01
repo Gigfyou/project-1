@@ -1,5 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<windows.h>  
+#include<math.h>
+//#include <rpc.h>  
 #define _CRT_SECURE_NO_WARNINGS		//解决scanf在报错问题
 //该源码为程序测试代码 code1-20;
 //函数预定义	code1-20;
@@ -153,7 +156,61 @@ void code11() {
 	}
 
 }
+
+
+//const char* newGUID() {
+//	static char buf[64]; // 静态缓冲区，用于存储GUID字符串  
+//	UUID uuid;           // UUID结构，用于存储GUID  
+//
+//	// 生成新的GUID  
+//	if (UuidCreate(&uuid) == RPC_S_OK) {
+//		// 将GUID格式化为字符串  
+//		sprintf_s(buf, sizeof(buf),
+//			"{%08X-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X}",
+//			uuid.Data1,
+//			uuid.Data2,
+//			uuid.Data3,
+//			uuid.Data4[0], uuid.Data4[1],
+//			uuid.Data4[2], uuid.Data4[3],
+//			uuid.Data4[4], uuid.Data4[5],
+//			uuid.Data4[6], uuid.Data4[7]);
+//	}
+//	else {
+//		// 如果GUID生成失败，设置一个默认字符串  
+//		strcpy_s(buf, sizeof(buf), "GUID_GENERATION_FAILED"); // 使用strcpy_s并指定缓冲区大小
+//	}
+//
+//	return buf; // 返回GUID字符串  
+//}
+
+//int code12() {
+//	// 测试函数  
+//	const char* guid = newGUID();
+//	printf("Generated GUID: %s\n", guid);
+//	return 0;
+//}
+void code13() {
+	//n!=1*2*3*4*n
+	int n=3, i,s=1;
+	for (i = 1; i <= n; i++) {
+		s *= i;
+	}
+	printf("%d", s);
+}
+void code14() {
+	//log(a)n=x  -> a(x)=n ->
+	int a, n, x;
+	double s;
+	s = log2(100);//log(10)100=2--10*10=100
+	printf("%lf", s);//2
+	//switch (x){
+	//	case 1:;
+	//	case 2:;
+	//	default:;
+	//}
+
+}
 int main() {
-	code11();
+	code14();
 	return 0;
 }
