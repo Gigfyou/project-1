@@ -1,6 +1,6 @@
 #pragma once						//头文件说明
 #define _CRT_SECURE_NO_WARNINGS		//解决scanf报错问题
-#define M 2							//学生个数
+#define M 1						//学生个数
 #define NAME 10						//姓名字段数
 
 #include<stdio.h>					//
@@ -13,7 +13,7 @@ struct studey
 	char name[10];	//姓名
 	char sex[2];	//性别
 	int six;		//年龄
-	int xh;			//学号
+	long xh;			//学号
 }STU[M];
 
 //各功能函数
@@ -107,7 +107,9 @@ void xmcx() {
 }
 void xbcx() {
 	char xb[2];
-
+	//int i = 0;
+	printf("请输入查询的性别：");
+	scanf("%s", &xb);
 }
 //code24 为退出程序模块
 void code24() {
