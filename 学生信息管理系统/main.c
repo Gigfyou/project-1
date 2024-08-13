@@ -220,17 +220,41 @@ void B2025() {
 	int x, y, i;
 
 }
+void XX() {
+	float x, y, a;
+	printf("\033[1m\033[31m\033[5m");
+	for (y = 1.3f; y > -1.1f; y -= 0.1f) {
+		for (x = -1.3f; x < 1.3f; x += 0.05f) {
+			a = x * x + y * y - 1;
+			if (a * a * a - x * x * y * y *y< 0) {
+
+				printf("*");
+			}
+			else {
+				printf(" ");
+			}
+		}
+		puts("");
+	}
+	printf("\033[0m");
+}
+void LX() {
+	int n;
+	printf("请输入n：");
+	scanf("%d", &n);
+
+}
 ////code1--20
 void main() {
 	int a;
 	printf("\n******************实验性代码项目解决方案模块***********************\n");
-	printf("运行代码模块：\n code1-学生信息管理系统(适用): 1 \n code2-Demo--25：2 \n code3-考试题目系统: 3 \n");
+	printf("运行代码模块：\n code1-学生信息管理系统(适用): 1 \n code2-爱心图案--25：2 \n code3-考试题目系统: 3 \n");
 	printf("输入运行的程序代码序号：");
 	scanf("%d", &a);
 	switch (a)
 	{
 	case 1:code22(); break;//code22();//学生信息管理系统函数入口
-	case 2:P5703_Main(); break;
+	case 2:XX(); break;
 	//case 3:code5(); break;
 	default:printf("Error"); break;
 	}
