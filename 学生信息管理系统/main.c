@@ -242,7 +242,16 @@ void LX() {
 	int n;
 	printf("请输入n：");
 	scanf("%d", &n);
+}
+void XXH() {
+	int n;
+	int a, b, c;
+	for (n = 100; n <= 100; n++) {
+		a = n / 100;
+		b = n % 100 / 10;
+		c = n % 10;
 
+	}
 }
 ////code1--20
 void main() {
@@ -251,12 +260,10 @@ void main() {
 	printf("运行代码模块：\n code1-学生信息管理系统(适用): 1 \n code2-爱心图案--25：2 \n code3-考试题目系统: 3 \n");
 	printf("输入运行的程序代码序号：");
 	scanf("%d", &a);
-	switch (a)
-	{
-	case 1:code22(); break;//code22();//学生信息管理系统函数入口
-	case 2:XX(); break;
-	//case 3:code5(); break;
-	default:printf("Error"); break;
+	switch (a){
+		case 1:code22(); break;//code22();//学生信息管理系统函数入口
+		case 2:XX(); break;
+		//case 3:code5(); break;
+		default:printf("Error"); break;
 	}
-	
 }
